@@ -52,11 +52,11 @@ class MyModel extends Model implements Decoratable
 
 ### Writing a Decorator
 
-To write a Decorator simply extend the basic decorator class. 
+To write a decorator simply extend the basic decorator class. 
 You can access the undelaying eloquent model by the `$this->model` property. 
 Whenever you try to access a property on the decorator, it will first look for 
-a function with the camilzed property name. If it was defined, it will be called.
-Otherwise it will be forwarded to the underlaying eloquent model.  
+a function with the camilzed property name. If it is defined, it will be called,
+otherwise it will be forwarded to the underlaying eloquent model.  
 
 ```php
 use mindtwo\LaravelDecorator\Decorator;
@@ -106,9 +106,6 @@ $myDecoratedCollection = $myCollection->decorate();
 
 Note that all items in the collection must implement the `Decoratable` interface, 
 otherwise this will throw an exception. 
-
-
-
 
 
 ### Changelog
