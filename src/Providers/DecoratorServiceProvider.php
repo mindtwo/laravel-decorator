@@ -14,7 +14,7 @@ class DecoratorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Collection::macro('decorate', function (string $class = '') {
+        Collection::macro('decorate', function ($class = '') {
             return $this->map(function ($model) use ($class) {
 
                 if (! is_a($model, Decoratable::class)) {
