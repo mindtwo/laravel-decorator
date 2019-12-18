@@ -16,7 +16,6 @@ class DecoratorServiceProvider extends ServiceProvider
     {
         Collection::macro('decorate', function ($class = '') {
             return $this->map(function ($model) use ($class) {
-
                 if (! is_a($model, Decoratable::class)) {
                     throw new DecoratorException('Model is not decoratable');
                 }
