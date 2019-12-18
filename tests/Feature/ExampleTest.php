@@ -2,12 +2,18 @@
 
 namespace mindtwo\LaravelDecorator\Tests\Feature;
 
-use mindtwo\LaravelAutoCreateUuid\Tests\TestCase;
+use Illuminate\Database\Eloquent\Model;
+use mindtwo\LaravelDecorator\Interfaces\Decoratable;
+use mindtwo\LaravelDecorator\Tests\TestCase;
+use mindtwo\LaravelDecorator\Traits\HasDecorator;
+use Mockery;
 
 class ExampleTest extends TestCase
 {
     public function testExample()
     {
-        $this->asserTrue(true);
+        $model = Mockery::mock(Decoratable::class);
+
+        $this->assertTrue(true);
     }
 }

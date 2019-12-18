@@ -2,12 +2,11 @@
 
 namespace mindtwo\LaravelDecorator;
 
-use App\Domains\Product\Interfaces\ProductDecoratorInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
-abstract class Decorator implements ProductDecoratorInterface
+abstract class Decorator
 {
     /**
      * The model which will be decorated.
