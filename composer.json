@@ -38,7 +38,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "mindtwo\\LaravelDecorator\\Provider\\DecoratorServiceProvider"
+                "mindtwo\\LaravelDecorator\\Providers\\DecoratorServiceProvider"
             ]
         }
     }
