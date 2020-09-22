@@ -14,7 +14,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^7.4",
+        "php": "^7.3",
         "laravel/framework": "6.*|^7.0|^8.0"
     },
     "require-dev": {
