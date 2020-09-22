@@ -1,4 +1,10 @@
 # Laravel Decorator
+[![Build Status](https://travis-ci.org/mindtwo/laravel-decorator.svg?branch=master)](https://travis-ci.org/mindtwo/laravel-decorator)
+[![StyleCI](https://styleci.io/repos/228616529/shield)](https://styleci.io/repos/159368194)
+[![Quality Score](https://img.shields.io/scrutinizer/g/mindtwo/laravel-decorator.svg?style=flat-square)](https://scrutinizer-ci.com/g/mindtwo/laravel-decorator)
+[![Latest Stable Version](https://img.shields.io/packagist/v/mindtwo/laravel-decorator?style=flat-square)](https://packagist.org/packages/mindtwo/laravel-decorator)
+[![Total Downloads](https://img.shields.io/packagist/dt/mindtwo/laravel-decorator?style=flat-square)](https://packagist.org/packages/mindtwo/laravel-decorator)
+[![MIT Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.md)
 
 ## Installation
 
