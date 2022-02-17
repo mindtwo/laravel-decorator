@@ -23,7 +23,7 @@ class Model extends \Illuminate\Database\Eloquent\Model implements Decoratable
     /**
      * Get some text.
      *
-     * @param null $value
+     * @param  null  $value
      */
     public function getSomeTextAttribute($value = null)
     {
@@ -33,7 +33,7 @@ class Model extends \Illuminate\Database\Eloquent\Model implements Decoratable
     /**
      * Get some date.
      *
-     * @param null $value
+     * @param  null  $value
      */
     public function getSomeDateAttribute($value = null)
     {

@@ -33,11 +33,10 @@ trait HasDecorator
     /**
      * Decorate the model.
      *
-     * @param string|null $decorator
+     * @param  string|null  $decorator
+     * @return mixed
      *
      * @throws DecoratorException
-     *
-     * @return mixed
      */
     public function decorate(?string $decorator = null)
     {

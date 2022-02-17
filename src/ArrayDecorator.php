@@ -3,10 +3,10 @@
 namespace mindtwo\LaravelDecorator;
 
 use ArrayAccess;
-use mindtwo\LaravelDecorator\Exceptions\DecoratorException;
-use ReflectionMethod;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use mindtwo\LaravelDecorator\Exceptions\DecoratorException;
+use ReflectionMethod;
 
 abstract class ArrayDecorator implements ArrayAccess
 {
@@ -18,7 +18,7 @@ abstract class ArrayDecorator implements ArrayAccess
     /**
      * MiteEntryDecorator constructor.
      *
-     * @param array $data
+     * @param  array  $data
      */
     public function __construct(array $data)
     {
@@ -28,8 +28,8 @@ abstract class ArrayDecorator implements ArrayAccess
     /**
      * ArrayAccess set.
      *
-     * @param mixed $offset
-     * @param mixed $value
+     * @param  mixed  $offset
+     * @param  mixed  $value
      */
     public function offsetSet($offset, $value)
     {
@@ -39,7 +39,7 @@ abstract class ArrayDecorator implements ArrayAccess
     /**
      * ArrayAccess unset.
      *
-     * @param mixed $offset
+     * @param  mixed  $offset
      */
     public function offsetUnset($offset)
     {
@@ -49,8 +49,7 @@ abstract class ArrayDecorator implements ArrayAccess
     /**
      * ArrayAccess exists.
      *
-     * @param mixed $offset
-     *
+     * @param  mixed  $offset
      * @return bool
      */
     public function offsetExists($offset)
@@ -61,8 +60,7 @@ abstract class ArrayDecorator implements ArrayAccess
     /**
      * ArrayAccess get.
      *
-     * @param mixed $offset
-     *
+     * @param  mixed  $offset
      * @return mixed
      */
     public function offsetGet($offset)
@@ -73,11 +71,10 @@ abstract class ArrayDecorator implements ArrayAccess
     /**
      * Determinates if a string represents a valid mutator method.
      *
-     * @param string $method
+     * @param  string  $method
+     * @return bool
      *
      * @throws \ReflectionException
-     *
-     * @return bool
      */
     protected function isMutatorMethod(string $method): bool
     {
@@ -96,8 +93,7 @@ abstract class ArrayDecorator implements ArrayAccess
     /**
      * Magic getter.
      *
-     * @param string $name
-     *
+     * @param  string  $name
      * @return mixed
      */
     public function __get($name)
@@ -114,8 +110,7 @@ abstract class ArrayDecorator implements ArrayAccess
     /**
      * Static make method.
      *
-     * @param array $data
-     *
+     * @param  array  $data
      * @return self
      */
     public static function make(array $data)
@@ -126,8 +121,7 @@ abstract class ArrayDecorator implements ArrayAccess
     /**
      * Create a decorated collection.
      *
-     * @param array|Collection $data
-     *
+     * @param  array|Collection  $data
      * @return Collection
      */
     public static function makeCollection($data): Collection

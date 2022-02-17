@@ -18,7 +18,7 @@ abstract class ModelDecorator
     /**
      * Presenter constructor.
      *
-     * @param Model $model
+     * @param  Model  $model
      */
     public function __construct(Model $model = null)
     {
@@ -28,9 +28,8 @@ abstract class ModelDecorator
     /**
      * Magic call method.
      *
-     * @param string     $method
-     * @param array|null $args
-     *
+     * @param  string  $method
+     * @param  array|null  $args
      * @return mixed
      */
     public function __call($method, $args)
@@ -41,8 +40,7 @@ abstract class ModelDecorator
     /**
      * Magic getter.
      *
-     * @param string $name
-     *
+     * @param  string  $name
      * @return mixed
      */
     public function __get($name)
@@ -59,11 +57,10 @@ abstract class ModelDecorator
     /**
      * Determinates if a string represents a valid mutator method.
      *
-     * @param string $method
+     * @param  string  $method
+     * @return bool
      *
      * @throws \ReflectionException
-     *
-     * @return bool
      */
     protected function isMutatorMethod(string $method): bool
     {
@@ -82,8 +79,7 @@ abstract class ModelDecorator
     /**
      * Decorates a model or a collection of models.
      *
-     * @param Model|Collection $data
-     *
+     * @param  Model|Collection  $data
      * @return Decorator|Collection
      */
     public static function decorate($data)
