@@ -2,6 +2,7 @@
 
 namespace mindtwo\LaravelDecorator\Providers;
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
 use mindtwo\LaravelDecorator\Exceptions\DecoratorException;
@@ -22,6 +23,13 @@ class DecoratorServiceProvider extends ServiceProvider
 
                 return $model->decorate($class);
             });
+        });
+    }
+
+    public function register()
+    {
+        $this->app->resolving(Decoratable::class, function (Decoratable $decoratable, Application $app) {
+            return $decoratable->decorate();
         });
     }
 }
